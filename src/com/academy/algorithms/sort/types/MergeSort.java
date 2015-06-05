@@ -7,18 +7,18 @@ import com.academy.algorithms.sort.SortType;
  */
 public class MergeSort extends SortType {
 
-    private Comparable[] aux;
 
-    public void sort(Comparable[] array, int lo, int hi) {
+    public void sort(Comparable[] array, Comparable[] aux, int lo, int hi) {
         if(hi <= lo) {
             return;
         }
         int mid = lo + (hi-lo)/2;
-        sort(array, lo, mid);
-        merge(array, lo, mid, hi);
+        sort(array, aux, lo, mid);
+        sort(array, aux, mid + 1, hi);
+        merge(array, aux, lo, mid, hi);
     }
 
-    private void merge(Comparable[] array, int lo, int mid, int hi) {
+    private void merge(Comparable[] array, Comparable[] aux, int lo, int mid, int hi) {
         int i = lo;
         int j = mid+1;
         for(int k = lo; k <= hi; k++) {
@@ -40,7 +40,7 @@ public class MergeSort extends SortType {
 
     @Override
     public void sort(Comparable[] array) {
-        aux = new Comparable[array.length];
-        sort(array, 0, array.length - 1);
+        Comparable[] aux = new Comparable[array.length];
+        sort(array, aux, 0, array.length - 1);
     }
 }
