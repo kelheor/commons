@@ -7,12 +7,6 @@ import com.academy.algorithms.sort.SortType;
  */
 public class MergeSort extends SortType {
 
-    private void insertionSort(Comparable[] a, int lo, int hi) {
-        for (int i = lo; i <= hi; i++)
-            for (int j = i; j > lo && less(a[j], a[j-1]); j--)
-                exchange(a, j, j - 1);
-    }
-
     public void sort(Comparable[] array, Comparable[] aux, int lo, int hi) {
         if (hi <= lo) {
             return;
