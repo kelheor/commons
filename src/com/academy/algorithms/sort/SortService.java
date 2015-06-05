@@ -21,6 +21,10 @@ public enum SortService {
         this.sortType = sortType;
     }
 
+    public SortType getSortType() {
+        return sortType;
+    }
+
     public void show(Comparable[] array) {
         for(Comparable comparable : array) {
             System.out.print(comparable + " ");
