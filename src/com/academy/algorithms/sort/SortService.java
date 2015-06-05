@@ -11,8 +11,9 @@ public enum SortService {
     COCKTAIL_SORT(new CocktailSort()),
     SELECTION_SORT(new SelectionSort()),
     INSERTION_SORT(new InsertionSort()),
+    JAVA_ARRAY_SORT(new JavaArraySort()),
     SHELL_SORT(new ShellSort()),
-    JAVA_ARRAY_SORT(new JavaArraySort());
+    MERGE_SORT(new MergeSort());
 
     private SortType sortType;
 
@@ -37,7 +38,7 @@ public enum SortService {
     }
 
     public void sort(Comparable[] array) {
-        sortType.sort(array);
+        sortType.execute(array);
         //show(array);
         System.out.println();
         assert isSorted(array);

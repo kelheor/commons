@@ -9,7 +9,6 @@ public class CocktailSort extends SortType {
 
     @Override
     public void sort(Comparable[] array) {
-        long startTime = System.nanoTime();
         int left = 0;
         int right = array.length - 1;
 
@@ -28,8 +27,5 @@ public class CocktailSort extends SortType {
             }
             left++;
         }
-        long endTime = System.nanoTime();
-        long executionTime = (endTime - startTime);
-        System.out.println("COCKTAIL SORT EXECUTION TIME: " + executionTime);
     }
 }

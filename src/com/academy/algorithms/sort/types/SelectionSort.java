@@ -9,7 +9,6 @@ public class SelectionSort extends SortType {
 
     @Override
     public void sort(Comparable[] array) {
-        long startTime = System.nanoTime();
         int N = array.length;
         for(int i = 0; i < N; i++) {
             int min = i;
@@ -20,8 +19,5 @@ public class SelectionSort extends SortType {
             }
             exchange(array, i, min);
         }
-        long endTime = System.nanoTime();
-        long executionTime = (endTime - startTime);
-        System.out.println("SELECTION SORT EXECUTION TIME: " + executionTime);
     }
 }

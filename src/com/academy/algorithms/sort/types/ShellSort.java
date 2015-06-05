@@ -9,7 +9,6 @@ public class ShellSort extends SortType {
 
     @Override
     public void sort(Comparable[] array) {
-        long startTime = System.nanoTime();
 
         int N = array.length;
         int h = 1;
@@ -25,8 +24,5 @@ public class ShellSort extends SortType {
             h = h/3;
         }
 
-        long endTime = System.nanoTime();
-        long executionTime = (endTime - startTime);
-        System.out.println("SHELL SORT EXECUTION TIME: " + executionTime);
     }
 }

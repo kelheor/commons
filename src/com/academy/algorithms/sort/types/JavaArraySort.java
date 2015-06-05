@@ -11,10 +11,6 @@ public class JavaArraySort extends SortType {
 
     @Override
     public void sort(Comparable[] array) {
-        long startTime = System.nanoTime();
         Arrays.sort(array);
-        long endTime = System.nanoTime();
-        long executionTime = (endTime - startTime);
-        System.out.println("JAVA ARRAY SORT EXECUTION TIME: " + executionTime);
     }
 }

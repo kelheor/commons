@@ -5,6 +5,14 @@ package com.academy.algorithms.sort;
  */
 public abstract class SortType {
 
+    public void execute(Comparable[] array) {
+        long startTime = System.nanoTime();
+        sort(array);
+        long endTime = System.nanoTime();
+        long executionTime = (endTime - startTime);
+        System.out.println(this.getClass().getName() + " SORT EXECUTION TIME: " + executionTime);
+    }
+
     public abstract void sort(Comparable[] array);
 
     public boolean less(Comparable v, Comparable w) {

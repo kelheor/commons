@@ -5,7 +5,7 @@ import java.util.Random;
 public class App {
 
     private static Random random = new Random();
-    private static int arraySize = 100;
+    private static int arraySize = 10000;
 
     public static Integer[] getRandomIntArray(int arraySize) {
         Integer array[] = new Integer[arraySize];
