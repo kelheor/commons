@@ -13,37 +13,39 @@ public class MergeSort extends SortType {
                 exchange(a, j, j - 1);
     }
 
-    public void sort(Comparable[] src, Comparable[] dst, int lo, int hi) {
-        if (hi <= lo + 6) {
-            insertionSort(dst, lo, hi);
+    public void sort(Comparable[] array, Comparable[] aux, int lo, int hi) {
+        if (hi <= lo) {
             return;
         }
-        int mid = lo + (hi - lo) / 2;
-        sort(dst, src, lo, mid);
-        sort(dst, src, mid+1, hi);
-
-        // using System.arraycopy() is a bit faster than the above loop
-        if (!less(src[mid+1], src[mid])) {
-            System.arraycopy(src, lo, dst, lo, hi - lo + 1);
-            return;
-        }
-
-        merge(src, dst, lo, mid, hi);
+        int mid = lo + (hi-lo)/2;
+        sort(array, aux, lo, mid);
+        sort(array, aux, mid + 1, hi);
+        merge(array, aux, lo, mid, hi);
     }
 
-    private void merge(Comparable[] src, Comparable[] dst, int lo, int mid, int hi) {
-        int i = lo, j = mid+1;
-        for (int k = lo; k <= hi; k++) {
-            if      (i > mid)              dst[k] = src[j++];
-            else if (j > hi)               dst[k] = src[i++];
-            else if (less(src[j], src[i])) dst[k] = src[j++];   // to ensure stability
-            else                           dst[k] = src[i++];
+    private void merge(Comparable[] array, Comparable[] aux, int lo, int mid, int hi) {
+        int i = lo;
+        int j = mid+1;
+        for(int k = lo; k <= hi; k++) {
+            aux[k] = array[k];
+        }
+
+        for(int k = lo; k<=hi; k++) {
+            if(i>mid) {
+                array[k] = aux[j++];
+            } else if(j>hi) {
+                array[k] = aux[i++];
+            } else if(less(aux[j], aux[i])) {
+                array[k] = aux[j++];
+            } else {
+                array[k] = aux[i++];
+            }
         }
     }
 
     @Override
     public void sort(Comparable[] array) {
-        Comparable[] aux = array.clone();
-        sort(aux, array, 0, array.length - 1);
+        Comparable[] aux = new Comparable[array.length];
+        sort(array, aux, 0, array.length - 1);
     }
 }
