@@ -13,6 +13,7 @@ public enum SortService {
     INSERTION_SORT(new InsertionSort()),
     JAVA_ARRAY_SORT(new JavaArraySort()),
     MERGE_SORT(new MergeSort()),
+    MERGE_BOTTOM_UP_SORT(new MergeBottomUpSort()),
     SHELL_SORT(new ShellSort());
 
     private SortType sortType;

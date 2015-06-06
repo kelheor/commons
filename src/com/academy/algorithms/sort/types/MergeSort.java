@@ -17,7 +17,7 @@ public class MergeSort extends SortType {
         merge(array, aux, lo, mid, hi);
     }
 
-    private void merge(Comparable[] array, Comparable[] aux, int lo, int mid, int hi) {
+    protected void merge(Comparable[] array, Comparable[] aux, int lo, int mid, int hi) {
         int i = lo;
         int j = mid+1;
         for(int k = lo; k <= hi; k++) {
