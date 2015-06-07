@@ -13,7 +13,6 @@ public class Adapter implements AvailableInterface {
 
     @Override
     public void execute() {
-        System.out.println("ADAPTER ENTITY EXECUTED");
         requiredEntity.execute();
     }
 }
