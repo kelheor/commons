@@ -1,4 +1,4 @@
-package com.academy.patterns.facade;
+package com.academy.patterns.shared;
 
 /**
  * Created by Kelheor on 07.06.2015.

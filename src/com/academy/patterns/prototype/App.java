@@ -1,7 +1,7 @@
 package com.academy.patterns.prototype;
 
-import com.academy.patterns.builder.CyberBattleship;
-import com.academy.patterns.property.Weapon;
+import com.academy.patterns.shared.CyberBattleship;
+import com.academy.patterns.shared.Weapon;
 
 /**
  * Created by keos on 08.06.15.

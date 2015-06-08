@@ -1,7 +1,8 @@
 package com.academy.patterns.builder;
 
-import com.academy.patterns.facade.AttackSystem;
-import com.academy.patterns.facade.DefenceSystem;
+import com.academy.patterns.shared.AttackSystem;
+import com.academy.patterns.shared.DefenceSystem;
+import com.academy.patterns.shared.CyberBattleship;
 
 /**
  * Created by keos on 08.06.15.

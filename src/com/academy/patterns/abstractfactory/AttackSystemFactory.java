@@ -1,7 +1,7 @@
 package com.academy.patterns.abstractfactory;
 
-import com.academy.patterns.facade.AbstractSystem;
-import com.academy.patterns.facade.AttackSystem;
+import com.academy.patterns.shared.AbstractSystem;
+import com.academy.patterns.shared.AttackSystem;
 
 /**
  * Created by keos on 08.06.15.

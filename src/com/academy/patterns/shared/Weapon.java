@@ -1,4 +1,4 @@
-package com.academy.patterns.property;
+package com.academy.patterns.shared;
 
 /**
  * Created by keos on 08.06.15.

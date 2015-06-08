@@ -1,5 +1,9 @@
 package com.academy.patterns.facade;
 
+import com.academy.patterns.shared.AbstractSystem;
+import com.academy.patterns.shared.AttackSystem;
+import com.academy.patterns.shared.DefenceSystem;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,8 +1,6 @@
-package com.academy.patterns.builder;
+package com.academy.patterns.shared;
 
-import com.academy.patterns.facade.AbstractSystem;
-import com.academy.patterns.property.Weapon;
-import com.academy.patterns.property.WeaponPrototype;
+import com.academy.patterns.builder.Builder;
 
 import java.util.ArrayList;
 import java.util.HashMap;

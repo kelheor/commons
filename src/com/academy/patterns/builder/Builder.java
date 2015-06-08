@@ -1,6 +1,7 @@
 package com.academy.patterns.builder;
 
-import com.academy.patterns.facade.AbstractSystem;
+import com.academy.patterns.shared.AbstractSystem;
+import com.academy.patterns.shared.CyberBattleship;
 
 import java.util.ArrayList;
 import java.util.List;
