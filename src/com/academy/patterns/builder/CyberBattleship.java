@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Created by keos on 08.06.15.
  */
-public class CyberBattleship implements WeaponPrototype {
+public class CyberBattleship implements WeaponPrototype, Cloneable {
 
     protected List<AbstractSystem> abstractSystems = new ArrayList<>();
 
@@ -135,4 +135,8 @@ public class CyberBattleship implements WeaponPrototype {
         weapons.remove(weapon);
     }
 
+    @Override
+    public CyberBattleship clone() {
+        return new CyberBattleship(this);
+    }
 }
