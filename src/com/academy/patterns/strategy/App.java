@@ -6,7 +6,7 @@ package com.academy.patterns.strategy;
 public class App {
     public static void main(String[] args) {
 
-        // Стратегия позволяет динамически изменять поведение объектов
+        // РЎС‚СЂР°С‚РµРіРёСЏ РїРѕР·РІРѕР»СЏРµС‚ РґРёРЅР°РјРёС‡РµСЃРєРё РёР·РјРµРЅСЏС‚СЊ РїРѕРІРµРґРµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ
 
         StrategyExecutor strategyExecutor = new StrategyExecutor(new SinglethreadStrategy());
         strategyExecutor.execute();

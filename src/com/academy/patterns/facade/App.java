@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        // Фасад предоставляет единый интерфейс управления подсистемами
+        // Р¤Р°СЃР°Рґ РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚ РµРґРёРЅС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕРґСЃРёСЃС‚РµРјР°РјРё
         SystemsFacade systemsFacade = new SystemsFacade();
         systemsFacade.executeFireSystem();
         systemsFacade.executeDefenceSystem();
