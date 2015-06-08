@@ -28,6 +28,7 @@ public class QuickSort extends SortType {
 
     private int partition(Comparable[] a, int lo, int hi) {
         // Берем опорную точку и сортируем массив так, чтобы слева от нее были элементы меньше, а справа больше
+        // При этом в конце этого метода опорная точка встает в ту позицию, чтобы выполнялось условие: a[lo..j-1] <= a[j] <= a[j+1..hi]
         // Далее делим массив от опорной точки на два подмассива и там выполняем подобную процедуру
         int i = lo;
         int j = hi+1;
@@ -51,7 +52,7 @@ public class QuickSort extends SortType {
             exchange(a, i, j);
         }
         // Помещение v = a[j] на место так, что a[lo..j-1] <= a[j] <= a[j+1..hi]
-        // Меняем lo на j
+        // Меняем a[lo] на a[j]
         exchange(a, lo, j);
         return j;
     }
