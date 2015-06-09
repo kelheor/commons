@@ -1,5 +1,6 @@
 package com.academy.algorithms.sort.types;
 
+import com.academy.algorithms.sort.SortService;
 import com.academy.algorithms.sort.SortType;
 
 import java.util.Random;
@@ -18,7 +19,8 @@ public class QuickSort extends SortType {
     }
 
     private void sort(Comparable[] a, int lo, int hi) {
-        if (hi <= lo) {
+        if (hi <= lo + 15) {
+            ((InsertionSort) SortService.INSERTION_SORT.getSortType()).sort(a, lo, hi);
             return;
         }
         int j = partition(a,lo,hi);

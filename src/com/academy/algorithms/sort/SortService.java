@@ -15,6 +15,8 @@ public enum SortService {
     MERGE_SORT(new MergeSort()),
     MERGE_BOTTOM_UP_SORT(new MergeBottomUpSort()),
     QUICK_SORT(new QuickSort()),
+    QUICK_3_WAY_SORT(new Quick3WaySort()),
+    ADVANCED_3_WAY_SORT(new AdvancedQuick3WaySort()),
     SHELL_SORT(new ShellSort());
 
     private SortType sortType;

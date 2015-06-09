@@ -6,7 +6,7 @@ package com.academy.patterns.bridge;
 public class App {
 
     public static void main(String[] args) {
-        
+
         // Разделяет абстракцию от реализации
 
         DefenceModule defenceModule = new DefenceModule(new EnergeticalShield());
