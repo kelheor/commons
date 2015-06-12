@@ -31,6 +31,10 @@ public class ConcurrentStack<Item> {
         }
     }
 
+    /**
+     * Добавляем элемент на вершину стека
+     * @param item
+     */
     public void push(Item item) {
         lock.lock();
         try {
@@ -44,6 +48,10 @@ public class ConcurrentStack<Item> {
         }
     }
 
+    /**
+     * Забираем элемент с вершины стека
+     * @return
+     */
     public Item pop() {
         lock.lock();
         try {
@@ -57,6 +65,10 @@ public class ConcurrentStack<Item> {
         }
     }
 
+    /**
+     * Получаем элемент с вершины стека, не удаляя его из стека
+     * @return
+     */
     public Item peek() {
         lock.lock();
         try {

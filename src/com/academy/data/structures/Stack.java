@@ -24,6 +24,10 @@ public class Stack<Item> {
         return N;
     }
 
+    /**
+     * Добавляем элемент на вершину стека
+     * @param item
+     */
     public void push(Item item) {
         Node<Item> oldfirst = first;
         first = new Node<Item>();
@@ -32,6 +36,10 @@ public class Stack<Item> {
         N++;
     }
 
+    /**
+     * Забираем элемент с вершины стека
+     * @return
+     */
     public Item pop() {
         if (isEmpty()) throw new NoSuchElementException("Stack underflow");
         Item item = first.item;
@@ -40,6 +48,10 @@ public class Stack<Item> {
         return item;
     }
 
+    /**
+     * Получаем элемент с вершины стека, не удаляя его из стека
+     * @return
+     */
     public Item peek() {
         if (isEmpty()) throw new NoSuchElementException("Stack underflow");
         return first.item;
