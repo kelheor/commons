@@ -75,7 +75,7 @@ public class CyberBattleship implements WeaponPrototype, Cloneable {
         this.abstractSystems = abstractSystems;
     }
 
-    public List<AbstractSystem> getAbstractSystems() {
+    public List<AbstractSystem> getSystems() {
         return abstractSystems;
     }
 

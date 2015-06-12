@@ -23,7 +23,7 @@ public class App {
         System.out.println("ETERNITY CYBER BATTLESHIP");
         CyberBattleship eternityBattleship = new CyberBattleship(cyberBattleship);
         System.out.println("GAUSS GUNS: " + eternityBattleship.getWeapon(Weapon.GAUSS_GUNS));
-        eternityBattleship.getAbstractSystems().add(new AttackSystem());
+        eternityBattleship.getSystems().add(new AttackSystem());
         eternityBattleship.setWeapon(Weapon.ROCKETS, 100);
         System.out.println("ROCKETS: " + eternityBattleship.getWeapon(Weapon.ROCKETS));
     }
