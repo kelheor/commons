@@ -14,10 +14,11 @@ public enum SortService {
     JAVA_ARRAY_SORT(new JavaArraySort()),
     MERGE_SORT(new MergeSort()),
     MERGE_BOTTOM_UP_SORT(new MergeBottomUpSort()),
+    HEAP_SORT(new HeapSort()),
+    SHELL_SORT(new ShellSort()),
     QUICK_SORT(new QuickSort()),
     QUICK_3_WAY_SORT(new Quick3WaySort()),
-    ADVANCED_3_WAY_SORT(new AdvancedQuick3WaySort()),
-    SHELL_SORT(new ShellSort());
+    ADVANCED_3_WAY_SORT(new AdvancedQuick3WaySort());
 
     private SortType sortType;
 
