@@ -13,6 +13,7 @@ import java.util.Map;
 public class CyberBattleship implements WeaponPrototype, Cloneable {
 
     protected List<AbstractSystem> abstractSystems = new ArrayList<>();
+    protected String name;
 
     protected final WeaponPrototype weaponPrototype;
     protected final Map<Weapon, Integer> weapons = new HashMap<>();
@@ -41,7 +42,37 @@ public class CyberBattleship implements WeaponPrototype, Cloneable {
         };
     }
 
+    public CyberBattleship(String name) {
+        this.name = name;
+        this.weaponPrototype = new WeaponPrototype() {
+            @Override
+            public Integer getWeapon(Weapon weapon) {
+                return null;
+            }
+
+            @Override
+            public boolean hasWeapon(Weapon weapon) {
+                return false;
+            }
+
+            @Override
+            public void setWeapon(Weapon weapon, Integer value) {
+
+            }
+
+            @Override
+            public void removeWeapon(Weapon weapon) {
+
+            }
+        };
+    }
+
     public CyberBattleship(WeaponPrototype weaponPrototype) {
+        this.weaponPrototype = weaponPrototype;
+    }
+
+    public CyberBattleship(WeaponPrototype weaponPrototype, String name) {
+        this.name = name;
         this.weaponPrototype = weaponPrototype;
     }
 
@@ -108,6 +139,14 @@ public class CyberBattleship implements WeaponPrototype, Cloneable {
         abstractSystems.parallelStream().forEach(AbstractSystem::execute);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public Integer getWeapon(Weapon weapon) {
         boolean containtValue = weapons.containsKey(weapon);
@@ -136,5 +175,10 @@ public class CyberBattleship implements WeaponPrototype, Cloneable {
     @Override
     public CyberBattleship clone() {
         return new CyberBattleship(this);
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
